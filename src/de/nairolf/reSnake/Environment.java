@@ -87,7 +87,6 @@ public class Environment {
 
     void tick() {
         if(!lose) {
-            System.out.println("inside");
             if (tickCounter % sn.speed == 0) {
                 if (newHeadToAdd) {
                     newHeadToAdd = false;

@@ -26,9 +26,12 @@ public class Game extends PApplet {
 
     public void draw() {
         en.tick();
-        background(0,0,0);
+        background(0,0,255);
         fill(255);
-        text("length: "+en.getScore(), 50, 50);
+        if(en.lose)
+            text("You lose! Final score: "+en.getScore(), 50, 50);
+        else
+            text("length: "+en.getScore(), 50, 50);
         image(en.getDrawSurface(), 0, 100);
     }
 
